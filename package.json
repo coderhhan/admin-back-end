@@ -1,0 +1,45 @@
+{
+  "name": "node-ts-backend",
+  "version": "1.0.0",
+  "description": "koa2-ts-mysql",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "jest ./tests/user.test.ts --detectOpenHandles",
+    "ts": "pm2 start ts-node index.ts --name node-ts-backend -i 1 --interpreter ./node_modules/.bin/ts-node",
+    "ts-node": "ts-node -r tsconfig-paths/register index.ts"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "dotenv": "^16.3.1",
+    "g": "^2.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^12.0.0",
+    "koa2-swagger-ui": "^5.9.1",
+    "mysql2": "^3.6.1",
+    "nodemon": "^3.0.1",
+    "swagger-jsdoc": "^6.2.8",
+    "typescript": "^5.1.6",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/koa": "^2.13.8",
+    "@types/koa-bodyparser": "^4.3.10",
+    "@types/koa-router": "^7.4.4",
+    "@types/node": "^20.4.8",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^4.2.0"
+  }
+}
